@@ -20,9 +20,19 @@ import im9 from "../imgs/9.png";
 import im10 from "../imgs/10.png";
 import im11 from "../imgs/11.png";
 import im12 from "../imgs/12.png";
+import im13 from "../imgs/13.png";
+
 
 import digi from "../imgs/splash.jpg";
 import digil from "../imgs/lapsplah.png";
+import hal from "../imgs/hal2.png";
+import prompt from "../imgs/prompt2.png";
+import vr from "../imgs/vr3.png";
+import mp from "../imgs/map5.jpg";
+import crc from "../imgs/crc3.jpg";
+import xo from "../imgs/xo1.png";
+import vr4 from "../imgs/vr4.png";
+
 import Navbar from "../app/components/ui/navbar";
 import HomePage from "../app/components/ui/homepage";
 
@@ -51,7 +61,7 @@ export default function App() {
     ? [im1, im2, im3, im4, digil, im6, im7, im8, im9, im10, im11, im12]
     : [im1, im2, im3, prompt, digi, hal, vr, mp, crc, im10, im11, im12, xo];
   useEffect(() => {
-    document.body.style.backgroundImage = url(${backgroundImages[activeIndex]});
+    document.body.style.backgroundImage = `url(${backgroundImages[activeIndex]})`;
   }, [activeIndex, backgroundImages]);
 
   return (
@@ -73,11 +83,13 @@ export default function App() {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img
-              src={image}
-              alt={Image ${index + 1}}
-              className="swiper-image"
-            />
+          <div style={{ maxWidth: '100%', height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img 
+                src={image.src} 
+                alt="image" 
+                style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
+              />
+          </div>
           </SwiperSlide>
         ))}
       </Swiper>
