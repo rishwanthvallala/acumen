@@ -93,6 +93,30 @@ body {
     color: rgb(255, 255, 255);
     font-size: 20px;
   }
+  .translucent-box {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    z-index: 300;
+  }
+  .register-button {
+    display: block;
+    background-color: #0026ff86; /* Blue color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .register-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
 }
 
 /* Styles for mobile devices (screen width up to 768px) */
@@ -107,7 +131,7 @@ body {
     object-fit: cover;
   }
   body {
-    background-size: contain;
+    background-size: cover;
     background-color: black;
     background-repeat: no-repeat;
   }
@@ -128,7 +152,8 @@ body {
   .translucent-box {
     margin-top: 10px;
     right: 20px;
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: rgba(105, 105, 105, 0.518);
+    color: rgb(255, 255, 255);
     padding: 20px;
     width: 200px;
     border-radius: 5px;
@@ -136,7 +161,7 @@ body {
 
   .register-button {
     display: block;
-    background-color: #007bff; /* Blue color */
+    background-color: #0026ff86; /* Blue color */
     color: white;
     text-align: center;
     padding: 10px;

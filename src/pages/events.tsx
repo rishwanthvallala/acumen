@@ -46,13 +46,12 @@ export default function App() {
     im11,
     im12,
   ];
-
   const isPhone = useMediaQuery({ query: "(min-width: 768px)" });
   const backgroundImages = isPhone
     ? [im1, im2, im3, im4, digil, im6, im7, im8, im9, im10, im11, im12]
-    : [im1, im2, im3, im4, digi, im6, im7, im8, im9, im10, im11, im12];
+    : [im1, im2, im3, prompt, digi, hal, vr, mp, crc, im10, im11, im12, xo];
   useEffect(() => {
-    document.body.style.backgroundImage = `url(${backgroundImages[activeIndex]})`;
+    document.body.style.backgroundImage = url(${backgroundImages[activeIndex]});
   }, [activeIndex, backgroundImages]);
 
   return (
@@ -74,18 +73,16 @@ export default function App() {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-          <div style={{ maxWidth: '100%', height: 'auto' }}>
-            <Image 
+            <img
               src={image}
-              alt="Description" 
-              layout="fill" 
-              objectFit="contain" />
-          </div>
-        </SwiperSlide>
+              alt={Image ${index + 1}}
+              className="swiper-image"
+            />
+          </SwiperSlide>
         ))}
       </Swiper>
       <div className="translucent-box">
-        <p>This is a grey translucent box.</p>
+        <p>A fun Event</p> <p>coordinator: bhavana</p> <p>contact:12344534</p>
         <a
           href="https://docs.google.com/forms/d/e/your_google_form_id/viewform"
           target="_blank"

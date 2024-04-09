@@ -11,8 +11,10 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@tabler/icons-react": "^3.1.0",
+    "@types/gsap": "^3.0.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.25",
+    "gsap": "^3.12.5",
     "next": "14.1.4",
     "react": "^18",
     "react-dom": "^18",
