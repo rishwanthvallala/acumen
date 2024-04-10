@@ -10,7 +10,9 @@ export function HoverBorderGradientDemo() {
         as="button"
         className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
       >
-        <span>Explore Events</span>
+        <span>
+        <p className="text-bold">Explore Events</p>
+        </span>
       </HoverBorderGradient>
     </div>
   );

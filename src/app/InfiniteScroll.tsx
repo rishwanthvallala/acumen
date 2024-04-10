@@ -17,14 +17,14 @@ export function InfiniteMovingCardsDemo() {
 const testimonials = [
 
   {
-    name:"M. V. Ramana",
+    name:"S. V. Ramana",
     designation: "Principal",
-    imgUrl: "/principal_SVR.jpg", // Add image URL
+    imgUrl: "/principal_SVR.jpg", 
   },
   {
     name: "Mr. NELATURI DAVID RAJU",
     designation: "Faculty Coordinator",
-    imgUrl: "/David Raju.jpg", // Add image URL
+    imgUrl: "/David Raju.jpg", 
   },
   {
     name: "Mr. Srinivas Chakravarthy",

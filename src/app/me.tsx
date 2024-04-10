@@ -5,16 +5,16 @@ const people = [
   {
     id: 1,
     name: "Rishwanth Vallala",
-    designation: "Software Engineer",
+    designation: "Dev Head",
     image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+      "/rishi.jpg",
   },
   {
     id: 2,
     name: "Bhanu teja",
-    designation: "Product Manager",
+    designation: "Dev Head  ",
     image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      "/bhanu.jpg",
   },
 ];
 
@@ -22,7 +22,7 @@ export function AnimatedTooltipPreview() {
   return (
     <div className="flex flex-row items-center justify-center mb-10 w-full">
         <div >
-            <p className="mr-8 text-gray-500 dark:text-gray-400">Designed by:</p>      
+            <p className="mr-8 text-gray-500 dark:text-gray-400">Designed by    :</p>      
         </div>
         <AnimatedTooltip items={people} />
     </div>

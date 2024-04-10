@@ -1,6 +1,7 @@
 import { Component } from "react";
 import { navitems } from "./MenuData";
 import "./NavBarStyle.css";
+
 class Navbar  {
     render() {
       return (
