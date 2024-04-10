@@ -38,9 +38,33 @@ import HomePage from "../app/components/ui/homepage";
 
 SwiperCore.use([EffectCards]);
 
+interface PopupProps {
+  onClose: () => void; // Define the type of onClose prop
+}
+
+function Popup({ onClose }: PopupProps) {
+  // Specify the type of onClose in the function parameters
+  return (
+    <div className="popup-overlay">
+      <div className="popup">
+        <span className="close" onClick={onClose}>
+          &times;
+        </span>
+        <div className="popup-content">
+          <p>Events Description</p>
+          <p>Event Coordinator : xyz</p>
+          <p>Phone no: 1223456</p>
+          <button className="register-button">Register Now</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
 export default function App() {
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const [showPopup, setShowPopup] = useState(false);
   // Array of image paths
   const images = [
     im1,
@@ -56,6 +80,17 @@ export default function App() {
     im11,
     im12,
   ];
+
+
+  const openPopup = () => {
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
+  };
+
+
   const isPhone = useMediaQuery({ query: "(min-width: 768px)" });
   const backgroundImages = isPhone
     ? [im1, im2, im3, im4, digil, im6, im7, im8, im9, im10, im11, im12]
@@ -66,7 +101,7 @@ export default function App() {
 
   return (
     <div>
-      <Navbar></Navbar>
+      <Navbar />
       <Swiper
         effect={"cards"}
         grabCursor={true}
@@ -83,25 +118,17 @@ export default function App() {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-          <div style={{ maxWidth: '100%', height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-              <img 
-                src={image.src} 
-                alt="image" 
-                style={{ maxWidth: '100%', height: 'auto', objectFit: 'contain' }}
-              />
-          </div>
+            <img
+              src={image.src}
+              alt={`Image ${index + 1}`}
+              className="swiper-image"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="translucent-box">
-        <p>A fun Event</p> <p>coordinator: bhavana</p> <p>contact:12344534</p>
-        <a
-          href="https://docs.google.com/forms/d/e/your_google_form_id/viewform"
-          target="_blank"
-          className="register-button"
-        >
-          Register Now
-        </a>
+      <div>
+        <button onClick={openPopup}>Show More</button>
+        {showPopup && <Popup onClose={closePopup} />}
       </div>
     </div>
   );
