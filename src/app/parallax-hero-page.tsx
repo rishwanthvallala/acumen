@@ -13,77 +13,77 @@ export const products = [
       "/1.png",
   },
   {
-    title: "Scary House",
-    link: "https://cursor.so",
+    title: "Paper Presentation",
+    link: "https://forms.gle/7L4WohPaR1MKVwJ97",
     thumbnail:
       "/2.png",
   },
   {
-    title: "VR Zone",
-    link: "https://userogue.com",
+    title: "Project Expo",
+    link: "https://forms.gle/DzuYzVgkCgSFwvbK6",
     thumbnail:
       "/3.png",
   },
 
   {
-    title: "VR Zone",
-    link: "https://editorially.org",
+    title: "Beyond the Prompt",
+    link: "https://forms.gle/nrxeRcGxUHTa33ey6",
     thumbnail:
       "/4.png",
   },
   {
-    title: "Paper Presentation",
-    link: "https://editrix.ai",
+    title: "Digital Art",
+    link: "",
     thumbnail:
       "/5.png",
   },
   {
-    title: "Project Expo",
-    link: "https://app.pixelperfect.quest",
+    title: "Scary House",
+    link: "",
     thumbnail:
       "/6.png",
   },
 
   {
-    title: "Digital Art",
-    link: "https://algochurn.com",
+    title: "VR Zone",
+    link: "https://forms.gle/Q5299tDmrde1vTqN9",
     thumbnail:
       "/7.png",
   },
   {
     title: "Geo Guesser",
-    link: "https://ui.aceternity.com",
+    link: "https://docs.google.com/forms/d/e/1FAIpQLSfotkcbV9pFURpDlBhPjJbOaBZl4mN0BrtTzU-uLH2PWE-SYQ/viewform",
     thumbnail:
       "/8.png",
   },
   {
     title: "IPL Auction",
-    link: "https://tailwindmasterkit.com",
+    link: "https://forms.gle/dk6tVkRhroHVunFa6",
     thumbnail:
       "/9.png",
   },
   {
     title: "BGMI Tournament",
-    link: "https://smartbridgetech.com",
+    link: "https://forms.gle/noDS377jFVUWpLgL9",
     thumbnail:
       "/10.png",
   },
   {
-    title: "Prompt Engineering",
-    link: "https://renderwork.studio",
+    title: "Infinite Words",
+    link: "",
     thumbnail:
       "/11.png",
   },
 
   {
-    title: "Creme Digital",
-    link: "https://cremedigital.com",
+    title: "Play Station",
+    link: "",
     thumbnail:
       "/12.png",
   },
   {
-    title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    title: "Tech Tac Toe",
+    link: "",
     thumbnail:
       "/13.png",
   },

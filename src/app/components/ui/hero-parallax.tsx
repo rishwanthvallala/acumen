@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from 'react';
 
 export const HeroParallax = ({
   products,
@@ -19,8 +20,8 @@ export const HeroParallax = ({
     thumbnail: string;
   }[];
 }) => {
-  const firstRow = products.slice(0, 7);
-  const secondRow = products.slice(7, 13);
+  const firstRow = [...products.slice(0, 7), products[0], products[1], products[2], products[3], products[4], products[5], products[6]];
+  const secondRow = [...products.slice(7, 14), products[7], products[8], products[9], products[10], products[11]];  
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -30,15 +31,16 @@ export const HeroParallax = ({
   const springConfig = { stiffness: 150 , damping: 30, bounce: 30 };
 
   const translateX = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, 1000]),
+    useTransform(scrollYProgress, [0, 1], [-100 , 3000]),
     springConfig
   );
+
   const translateXReverse = useSpring(
-    useTransform(scrollYProgress, [0, 1], [0, -1000]),
+    useTransform(scrollYProgress, [0, 1], [-100, -2500]),
     springConfig
   );
   const rotateX = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [45, 0]),
+    useTransform(scrollYProgress, [0, 0.2], [40, 0]),
     springConfig
   );
   const opacity = useSpring(
@@ -57,11 +59,30 @@ export const HeroParallax = ({
     useTransform(scrollYProgress, [0, 1], [0, 500]),
     springConfig
   );
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+    };
+
+    // Initial check on component mount
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div
-      ref={ref}
-      className="h-[250vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
-    >
+        ref={ref}
+        className={`py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] ${
+          isMobile ? 'h-[160vh]' : 'h-[250vh]'
+        }`}
+      >
       <motion.div
         style={{
           y : headerY,
