@@ -13,7 +13,9 @@ export default function Landing() {
   return (
     <>
         <HeroParallaxDemo />
-        <BackgroundGradientDemo />
+        <a href="/events">
+          <BackgroundGradientDemo text="Explore Events" />
+        </a>
         <HeroHighlightDemo part1="Our" part2="Mentors" />
         <InfiniteMovingCardsDemo />
         <HeroHighlightDemo part1="The" part2="coordinators" />

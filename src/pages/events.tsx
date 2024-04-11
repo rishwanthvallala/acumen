@@ -1,3 +1,4 @@
+"use client";
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useMediaQuery } from "react-responsive";
@@ -35,7 +36,10 @@ import vr4 from "../imgs/vr4.png";
 
 import Navbar from "../app/components/ui/navbar";
 import SwiperComponent from "../app/components/ui/swiper";
-
+import Modal from "../app/modal";
+import ModalComponent from "../app/modal";
+import { BackgroundGradientDemo } from "../app/BackgroundGradientDemo";
+import "./globals.css";
 
 SwiperCore.use([EffectCards]);
 const images = [
@@ -55,8 +59,9 @@ const images = [
 
 
 
-const IndexPage: React.FC = () => {
+export default function IndexPage() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const isClient = typeof window !== 'undefined'; // Check if running on client-side
   const isPhone = isClient ? useMediaQuery({ query: "(min-width: 768px)" }) : false; // Use useMediaQuery only on client-side
   const backgroundImages = isPhone
@@ -70,9 +75,18 @@ const IndexPage: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <SwiperComponent images={images.map(image => image.src )} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+      <div className="z-10">
+        <SwiperComponent images={images.map(image => image.src )} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+      </div>
+      <div className="z-9999">
+        <ModalComponent isOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} selectedIndex={activeIndex} />
+      </div>
+      <div className="text-center" onClick={() => setIsModalOpen(true)}> 
+        <BackgroundGradientDemo text="View More"  />
+        </div>
+
     </div>
   );
 };
 
-export default IndexPage;
+
