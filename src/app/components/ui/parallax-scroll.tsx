@@ -27,7 +27,7 @@
         ref={gridRef}
       >
         <div
-          className="grid grid-cols-1 grid-cols-3 items-start  max-w-5xl mx-auto gap-10 py-40 px-10"
+          className="grid grid-cols-2 lg:grid-cols-3 items-start  max-w-5xl mx-auto gap-10 py-40 px-10"
           ref={gridRef}
         >
           <div className="grid gap-10">
@@ -36,39 +36,39 @@
                 style={{ y: translateFirst }} // Apply the translateY motion value here
                 key={"grid-1" + idx}
               >
-                <div className="card">
-                  <img src={el.imageUrl} alt={el.title} style={{ borderRadius: "1rem" }} />
-                  <div className="card-content">
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{el.title}</h3>
-                    <p className="text-gray-600 dark:text-gray-300">{el.description}</p>
+              <div className="card bg-white overflow-hidden shadow-lg" style={{ borderRadius: "1rem" }}>
+                  <img src={el.imageUrl} alt={el.title} className="w-full h-full object-cover" />
+                  <div className="card-content p-4">
+                      <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 flex justify-center items-center">{el.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-300 flex justify-center items-center">{el.description}</p>
                   </div>
-                </div>
+              </div>
               </motion.div>
             ))}
           </div>
           <div className="grid gap-10">
             {secondPart.map((el, idx) => (
               <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
-                  <div className="card">
-                      <img src={el.imageUrl} alt={el.title} style={{ borderRadius: "1rem" }} />
-                      <div className="card-content">
-                      <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{el.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300">{el.description}</p>
-                      </div>
+                <div className="card bg-white  overflow-hidden shadow-lg" style={{ borderRadius: "1rem" }}>
+                  <img src={el.imageUrl} alt={el.title} className="w-full"  />
+                  <div className="card-content p-4">
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 flex justify-center items-center">{el.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300 flex justify-center items-center">{el.description}</p>
                   </div>
+                </div>
               </motion.div>
             ))}
           </div>
           <div className="grid gap-10">
             {thirdPart.map((el, idx) => (
               <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
-                  <div className="card">
-                      <img src={el.imageUrl} alt={el.title} style={{ borderRadius: "1rem" }} />
-                      <div className="card-content">
-                      <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{el.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300">{el.description}</p>
-                      </div>
+                <div className="card bg-white  overflow-hidden shadow-lg" style={{ borderRadius: "1rem" }}>
+                  <img src={el.imageUrl} alt={el.title} className="w-full"  />
+                  <div className="card-content p-4 ">
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 flex justify-center items-center">{el.title}</h3> 
+                    <p className="text-gray-600 dark:text-gray-300 flex justify-center items-center">{el.description}</p>
                   </div>
+                </div>
               </motion.div>
 
             ))}

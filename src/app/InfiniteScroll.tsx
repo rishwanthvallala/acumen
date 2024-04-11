@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
 import { InfiniteMovingCards } from "./components/ui/infinite-moving-cards";
 
 
 export function InfiniteMovingCardsDemo() {
   return (
-    <div className="mt-32 mb-16  flex items-center justify-center">
+    <div className="mt-16 lg:mt-16 mb-28 flex items-center justify-center">
       <InfiniteMovingCards
         items={testimonials}
         direction="right"

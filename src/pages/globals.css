@@ -6,29 +6,42 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --foreground-rgb: 0, 0, 0 ;
-  --background-start-rgb: 14, 19, 20;
-  --background-middle-rgb: 0, 0, 255; 
-  --background-end-rgb: 214, 219, 220;
-}
+  --foreground-rgb: 14, 19, 20;
+  --background-start-light-rgb: 14, 19, 20;
+  --background-end-light-rgb: 214, 219, 220;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --background-start-dark-rgb: 14, 19, 20;
+  --background-end-dark-rgb: 214, 219, 220;
 }
 
 body {
-  font-family:  Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-light-rgb))
+  )
+  rgb(var(--background-start-light-rgb));
+
+  /* Define the dark background gradient */
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-dark-rgb))
+  )
+  rgb(var(--background-start-dark-rgb));
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(
       to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
+      rgb(var(--background-end-dark-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-dark-rgb));
+  }
 }
 
 @layer utilities {
