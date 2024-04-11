@@ -1,0 +1,237 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+body {
+  background-size: contain;
+  background-color: black;
+  background-repeat: no-repeat;
+}
+
+.swiper {
+  max-width: 492px;
+  max-height: 695px;
+  margin-top: 5%;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-image: url("/1.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(2n) {
+  background-image: url("/2.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(3n) {
+  background-image: url("/3.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(4n) {
+  background-image: url("/5.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(5n) {
+  background-image: url("/6.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(6n) {
+  background-image: url("/7.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(7n) {
+  background-image: url("/8.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(8n) {
+  background-image: url("/9.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(9n) {
+  background-image: url("/10.png");
+  border: 3px solid white;
+}
+
+.swiper-slide:nth-child(10n) {
+  background-image: url("/11.png");
+  border: 3px solid white;
+}
+.swiper-slide:nth-child(11n) {
+  background-image: url("/12.png");
+  border: 3px solid white;
+}
+
+@media (min-width: 1024px) {
+  .swiper-image {
+    max-width: 492px;
+    max-height: 695px;
+    object-fit: cover;
+  }
+  .swiper {
+    max-width: 492px;
+    max-height: 695px;
+    margin-top: 10%;
+  }
+  .swiper-button-next {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+  .swiper-button-prev {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+  }
+  .translucent-box {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 20px;
+    width: 300px;
+    border-radius: 5px;
+    z-index: 300;
+  }
+  .register-button {
+    display: block;
+    background-color: #0026ff86; /* Blue color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .register-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+}
+
+/* Styles for mobile devices (screen width up to 768px) */
+@media (max-width: 768px) {
+  .swiper-image {
+    /*width: 238px; 
+    height: 337px;
+    height: 359px;
+    width: 254px;*/
+    width: 238px;
+    height: 337px;
+    object-fit: cover;
+  }
+  body {
+    background-size: cover;
+    background-color: black;
+    background-repeat: no-repeat;
+  }
+  .swiper {
+    width: 238px;
+    height: 337px;
+    margin-top: 0%;
+  }
+  .swiper-button-next {
+    color: rgb(255, 255, 255);
+    transform: translate(+25px);
+  }
+  .swiper-button-prev {
+    color: rgb(255, 255, 255);
+    transform: translate(-25px);
+  }
+
+  .translucent-box {
+    margin-top: 10px;
+    right: 20px;
+    background-color: rgba(105, 105, 105, 0.518);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 200px;
+    border-radius: 5px;
+  }
+
+  .register-button {
+    display: block;
+    background-color: #0026ff86; /* Blue color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .register-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+  }
+}
+
+.swiper-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  fill: white; /* Set the color of the icon */
+  width: 20px; /* Adjust the size of the icon */
+  height: 20px; /* Adjust the size of the icon */
+
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px; /* Adjust the size of the buttons */
+  height: 40px; /* Adjust the size of the buttons */
+  background-color: rgba(0, 0, 0, 0.8); /* Dark translucent background color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000; /* Ensure buttons are above the swiper */
+}
+
+.swiper-button-prev {
+  left: 20%; /* Adjust the distance from the left */
+}
+
+.swiper-button-next {
+  right: 20%; /* Adjust the distance from the right */
+}
+
+.swiper-button-prev svg,
+.swiper-button-next svg {
+  fill: white; /* Set the color of the icons */
+}
+.mobile-margin-top {
+  margin-top: 32px;
+}

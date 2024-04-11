@@ -34,67 +34,35 @@ import xo from "../imgs/xo1.png";
 import vr4 from "../imgs/vr4.png";
 
 import Navbar from "../app/components/ui/navbar";
-import HomePage from "../app/components/ui/homepage";
+import SwiperComponent from "../app/components/ui/swiper";
+
 
 SwiperCore.use([EffectCards]);
-
-interface PopupProps {
-  onClose: () => void; // Define the type of onClose prop
-}
-
-function Popup({ onClose }: PopupProps) {
-  // Specify the type of onClose in the function parameters
-  return (
-    <div className="popup-overlay">
-      <div className="popup">
-        <span className="close" onClick={onClose}>
-          &times;
-        </span>
-        <div className="popup-content">
-          <p>Events Description</p>
-          <p>Event Coordinator : xyz</p>
-          <p>Phone no: 1223456</p>
-          <button className="register-button">Register Now</button>
-        </div>
-      </div>
-    </div>
-  );
-}
+const images = [
+  im1,
+  im2,
+  im3,
+  im4,
+  im5,
+  im6,
+  im7,
+  im8,
+  im9,
+  im10,
+  im11,
+  im12,
+];
 
 
-export default function App() {
+
+const IndexPage: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [showPopup, setShowPopup] = useState(false);
-  // Array of image paths
-  const images = [
-    im1,
-    im2,
-    im3,
-    im4,
-    im5,
-    im6,
-    im7,
-    im8,
-    im9,
-    im10,
-    im11,
-    im12,
-  ];
-
-
-  const openPopup = () => {
-    setShowPopup(true);
-  };
-
-  const closePopup = () => {
-    setShowPopup(false);
-  };
-
-
-  const isPhone = useMediaQuery({ query: "(min-width: 768px)" });
+  const isClient = typeof window !== 'undefined'; // Check if running on client-side
+  const isPhone = isClient ? useMediaQuery({ query: "(min-width: 768px)" }) : false; // Use useMediaQuery only on client-side
   const backgroundImages = isPhone
-    ? [im1, im2, im3, im4, digil, im6, im7, im8, im9, im10, im11, im12]
-    : [im1, im2, im3, prompt, digi, hal, vr, mp, crc, im10, im11, im12, xo];
+    ? [im1.src, im2.src, im3.src, im4.src, digil.src, im6.src, im7.src, im8.src, im9.src, im10.src, im11.src, im12.src]
+    : [im1.src, im2.src, im3.src, prompt.src, digi.src, hal.src, vr.src, mp.src, crc.src, im10.src, im11.src, im12.src, xo.src];
+
   useEffect(() => {
     document.body.style.backgroundImage = `url(${backgroundImages[activeIndex]})`;
   }, [activeIndex, backgroundImages]);
@@ -102,34 +70,9 @@ export default function App() {
   return (
     <div>
       <Navbar />
-      <Swiper
-        effect={"cards"}
-        grabCursor={true}
-        className="mySwiper"
-        updateOnWindowResize={true}
-        navigation={true}
-        modules={[Navigation]}
-        onRealIndexChange={(swiper: SwiperType) =>
-          setActiveIndex(swiper.realIndex)
-        }
-        autoplay={{
-          disableOnInteraction: true,
-        }}
-      >
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={image.src}
-              alt={`Image ${index + 1}`}
-              className="swiper-image"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <div>
-        <button onClick={openPopup}>Show More</button>
-        {showPopup && <Popup onClose={closePopup} />}
-      </div>
+      <SwiperComponent images={images.map(image => image.src )} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
     </div>
   );
-}
+};
+
+export default IndexPage;
