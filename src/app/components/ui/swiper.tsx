@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import Font
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'; // Import desired icons
 import './styles.css'; // Assuming styles are separated into a CSS file
 import { useMediaQuery } from 'react-responsive';
+import { useEffect, useState } from 'react';
 
 interface SwiperProps {
   images: string[];
@@ -24,10 +25,25 @@ const SwiperComponent: React.FC<SwiperProps> = ({ images, activeIndex, setActive
      const goPrev = () => {
         swiperRef.current?.swiper.slidePrev();
      };
-     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+     const [isMobile, setIsMobile] = useState(false);
+
+     useEffect(() => {
+       const handleResize = () => {
+         setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+       };
+   
+       // Initial check on component mount
+       handleResize();
+   
+       // Add event listener for window resize
+       window.addEventListener('resize', handleResize);
+   
+       // Clean up event listener on component unmount
+       return () => window.removeEventListener('resize', handleResize);
+     }, []);
 
      return (
-        <div className=" swiper-container" style={{ marginTop: isMobile ? '32px' : '0' }}>
+        <div className=" swiper-container" style={{ marginTop: isMobile ? '40px' : '0' }}>
           <button className="swiper-button-prev" onClick={goPrev}>
             <FontAwesomeIcon icon={faChevronLeft} /> {/* Use FontAwesomeIcon for the left icon */}
           </button>

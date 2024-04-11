@@ -6,9 +6,10 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 0, 0, 0 ;
+  --background-start-rgb: 14, 19, 20;
+  --background-middle-rgb: 0, 0, 255; 
+  --background-end-rgb: 214, 219, 220;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +21,7 @@
 }
 
 body {
+  font-family:  Helvetica, sans-serif;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -33,4 +35,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+.center {
+  display: inline-block;
+  text-align: center;
 }
