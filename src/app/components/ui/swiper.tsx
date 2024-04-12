@@ -79,29 +79,24 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
           autoplay={{ disableOnInteraction: true }}
         >
           {events.map((event, index) => (
-            <SwiperSlide key={index}>
-              <div style={{ position: 'relative' }}>
-                <img src={event.event_image} alt={`Image ${index + 1}`} className="swiper-image" onClick={() => handleSlideClick(index)} />
-                {selectedSlide === index && (
-                  <div className={`description-overlay text-white backdrop-filter backdrop-blur ${blurBackground ? 'blur-background' : ''} `}>
-                    <h3 className="text-white text-2xl font-bold mb-2 text-center text-white">
-                      {event.event_name}
-                    </h3>
-                    <p>
-                      {event.event_description}
-                    </p>
-                    <p>
-                      Timings: {event.event_timings}
-                    </p>
-                    <p>
-                      Venue: {event.event_venue}
-                    </p>
-                    <button className="register-button">Register</button>
-                    <button className="close" onClick={() => handleSlideClick(index)}> Close </button>
-                  </div>
-                )}
-              </div>
-            </SwiperSlide>
+           <SwiperSlide key={index}>
+           <div style={{ position: 'relative' }}>
+             <img src={event.event_image} alt={`Image ${index + 1}`} className="swiper-image" onClick={() => handleSlideClick(index)} />
+             {selectedSlide === index && (
+               <div className="description-overlay absolute top-0 left-0 w-full h-full flex flex-col justify-center items-center text-white backdrop-filter backdrop-blur bg-gray-800 bg-opacity-75">
+                 <h3 className="text-2xl font-bold mb-2 text-center">{event.event_name}</h3>
+                 <p className="mb-2">{event.event_description}</p>
+                 <p className="mb-2">Timings: {event.event_timings}</p>
+                 <p className="mb-2">Venue: {event.event_venue}</p>
+                 <div className="flex space-x-4">
+                   <button className="register-button bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Register</button>
+                   <button className="close bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded" onClick={() => handleSlideClick(index)}>Close</button>
+                 </div>
+               </div>
+             )}
+           </div>
+         </SwiperSlide>
+         
           ))}
         </Swiper>
         <button className="swiper-button-next" onClick={goNext}>
