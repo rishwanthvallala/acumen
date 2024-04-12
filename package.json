@@ -27,6 +27,7 @@
     "react-modal": "^3.16.1",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.22.3",
+    "sharp": "^0.33.3",
     "styled-components": "^6.1.8",
     "swiper": "^11.1.0",
     "tailwind-merge": "^2.2.2",

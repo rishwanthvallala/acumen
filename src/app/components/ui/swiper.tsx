@@ -7,6 +7,8 @@ import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons
 import './styles.css'; // Assuming styles are separated into a CSS file
 import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+
 
 interface SwiperProps {
   images: string[];

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { StaticImageData } from 'next/image';
 
 interface ImageGalleryProps {
-  images: { imageUrl: string; name: string; designation: string }[];
+  images: { imageUrl: StaticImageData; name: string; designation: string }[];
 }
 
 const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
@@ -20,7 +21,7 @@ const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
         {images.map((image, index) => (
           <div key={index} className="relative mb-4 lg:mb-0 mr-4 lg:mr-0">
             <img
-              src={image.imageUrl}
+              src={image.imageUrl.src}
               alt={`Image ${index + 1}`}
               className={`h-32 lg:h-64 rounded-xl object-cover transition-all duration-300 ${
                 hoveredIndex !== null && hoveredIndex !== index ? 'filter grayscale w-28' : ''
