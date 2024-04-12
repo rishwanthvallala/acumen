@@ -248,10 +248,6 @@ body {
   /* Remove background color */
   background: none;
 
-  /* Apply blur effect (adjust filter values as needed) */
-  backdrop-filter: blur(5px); /* Adjust blur strength */
-  -webkit-backdrop-filter: blur(5px); /* For WebKit browsers */
-    transition: backdrop-filter 1s ease-in-out; /* Adjust transition duration and timing */
 
   /* Animate content elements to appear from bottom */
   padding: 20px;
@@ -259,3 +255,16 @@ body {
   overflow: auto; /* Enable scrolling if content exceeds overlay height */
 }
 
+.blur-background {
+  backdrop-filter: blur(0); /* Initial state, no blur */
+  animation: blurAnimation 0.8s ease forwards; /* Animation duration: 1 second */
+}
+
+@keyframes blurAnimation {
+  from {
+    backdrop-filter: blur(0); /* Start with no blur */
+  }
+  to {
+    backdrop-filter: blur(5px); /* End with the desired blur */
+  }
+}

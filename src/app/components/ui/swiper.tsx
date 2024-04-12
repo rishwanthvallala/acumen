@@ -27,6 +27,7 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
     const swiperRef = React.useRef<SwiperRef>(null);
     const [isMobile, setIsMobile] = useState(false);
     const [selectedSlide, setSelectedSlide] = useState<number | null>(null);
+    const [blurBackground, setBlurBackground] = useState(false);
 
      const goNext = () => {
         swiperRef.current?.swiper.slideNext();
@@ -47,7 +48,10 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
      }, []);
 
      const handleSlideClick = (index: number) => {
-      setSelectedSlide(index === selectedSlide ? null : index);
+      setSelectedSlide(selectedSlide === index ? null : index);
+      // Delay the toggle of blurBackground state by 100 milliseconds (0.1 second)
+        setBlurBackground(!blurBackground); // Toggle blur background
+    
     };
     const handleClickOutside = (event: MouseEvent) => {
       if (selectedSlide !== null && !event.target) {
@@ -61,18 +65,17 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
     }, [selectedSlide]); // Re-attach listener on selectedSlide change (optional)
   
 
+
     return (
       <div className="swiper-container" style={{ marginTop: isMobile ? '40px' : '0' }}>
         <button className="swiper-button-prev" onClick={goPrev}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <Swiper
-          ref={swiperRef}
           effect="cards"
           grabCursor={true}
           className="mySwiper"
           updateOnWindowResize={true}
-          onRealIndexChange={(swiper) => setActiveIndex(swiper.realIndex)}
           autoplay={{ disableOnInteraction: true }}
         >
           {events.map((event, index) => (
@@ -80,8 +83,8 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
               <div style={{ position: 'relative' }}>
                 <img src={event.event_image} alt={`Image ${index + 1}`} className="swiper-image" onClick={() => handleSlideClick(index)} />
                 {selectedSlide === index && (
-                  <div className="description-overlay text-white">
-                    <h3 className="text-white text-2xl font-bold mb-2 text-center text-white">  
+                  <div className={`description-overlay text-white backdrop-filter backdrop-blur ${blurBackground ? 'blur-background' : ''} `}>
+                    <h3 className="text-white text-2xl font-bold mb-2 text-center text-white">
                       {event.event_name}
                     </h3>
                     <p>
