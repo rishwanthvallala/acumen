@@ -5,7 +5,7 @@ import {AnimatedTooltipPreview} from "./me";
 import { BackgroundGradientDemo } from "./BackgroundGradientDemo";
 import { HeroHighlightDemo } from "./HeroHighlightDemo";
 import  ImageGalleryDemo  from "./ImageGalleryDemo";
-
+import Link from "next/link";
 import "./globals.css";
 
 
@@ -13,9 +13,10 @@ export default function Landing() {
   return (
     <>
         <HeroParallaxDemo />
-        <a href="/events">
+
+        <Link href="/events">
           <BackgroundGradientDemo text="Explore Events" />
-        </a>
+        </Link>
         <HeroHighlightDemo part1="Our" part2="Mentors" />
         <InfiniteMovingCardsDemo />
         <HeroHighlightDemo part1="The" part2="coordinators" />

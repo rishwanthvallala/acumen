@@ -32,11 +32,9 @@ import vr from "../imgs/vr3.png";
 import mp from "../imgs/map5.jpg";
 import crc from "../imgs/crc3.jpg";
 import xo from "../imgs/xo1.png";
-import vr4 from "../imgs/vr4.png";
 
 import Navbar from "../app/components/ui/navbar";
 import SwiperComponent from "../app/components/ui/swiper";
-import Modal from "../app/modal";
 import ModalComponent from "../app/modal";
 import { BackgroundGradientDemo } from "../app/BackgroundGradientDemo";
 import "./globals.css";
@@ -58,15 +56,20 @@ const images = [
 ];
 
 
-
 export default function IndexPage() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const isClient = typeof window !== 'undefined'; // Check if running on client-side
-  const isPhone = isClient ? useMediaQuery({ query: "(min-width: 768px)" }) : false; // Use useMediaQuery only on client-side
+
+  // Use useMediaQuery unconditionally to avoid React Hooks error
+  const isClient = typeof window !== 'undefined';
+  const isPhone = isClient ? useMediaQuery({ query: "(min-width: 768px)" }) : false;
+
+  // Background images based on media query
   const backgroundImages = isPhone
-    ? [im1.src, im2.src, im3.src, im4.src, digil.src, im6.src, im7.src, im8.src, im9.src, im10.src, im11.src, im12.src]
-    : [im1.src, im2.src, im3.src, prompt.src, digi.src, hal.src, vr.src, mp.src, crc.src, im10.src, im11.src, im12.src, xo.src];
+    //? [im1.src, im2.src, im3.src, im4.src, digil.src, im6.src, im7.src, im8.src, im9.src, im10.src, im11.src, im12.src]
+    //: [im1.src, im2.src, im3.src, prompt.src, digi.src, hal.src, vr.src, mp.src, crc.src, im10.src, im11.src, im12.src, xo.src];
+    ?[im1, im2, im3, im4, digil, im6, im7, im8, im9, im10, im11, im12, im13]
+    : [im1, im2, im3, prompt, digi, hal, vr, mp, crc, im10, im11, im12, xo];
 
   useEffect(() => {
     document.body.style.backgroundImage = `url(${backgroundImages[activeIndex]})`;
@@ -75,18 +78,15 @@ export default function IndexPage() {
   return (
     <div>
       <Navbar />
-      <div className="z-10">
+      <div className="z-1">
         <SwiperComponent images={images.map(image => image.src )} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
       </div>
-      <div className="z-9999">
+      <div className="absolute z-9999">
         <ModalComponent isOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} selectedIndex={activeIndex} />
       </div>
-      <div className="text-center" onClick={() => setIsModalOpen(true)}> 
-        <BackgroundGradientDemo text="View More"  />
-        </div>
-
+      <div className="text-center z-9999" onClick={() => setIsModalOpen(true)}> 
+        <BackgroundGradientDemo text="View More" />
+      </div>
     </div>
   );
 };
-
-
