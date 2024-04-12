@@ -5,7 +5,6 @@ import { useMediaQuery } from "react-responsive";
 import Image from 'next/image';
 import "swiper/css";
 import "swiper/css/effect-cards";
-import "./styles.css";
 import { EffectCards, Navigation } from "swiper/modules";
 import SwiperCore, { Swiper as SwiperType } from "swiper";
 
@@ -35,26 +34,102 @@ import xo from "../imgs/xo1.png";
 
 import Navbar from "../app/components/ui/navbar";
 import SwiperComponent from "../app/components/ui/swiper";
-import ModalComponent from "../app/modal";
-import { BackgroundGradientDemo } from "../app/BackgroundGradientDemo";
 import "./globals.css";
 
 SwiperCore.use([EffectCards]);
-const images = [
-  im1,
-  im2,
-  im3,
-  im4,
-  im5,
-  im6,
-  im7,
-  im8,
-  im9,
-  im10,
-  im11,
-  im12,
+const events = [
+  {
+    event_name: "Event 1",
+    event_description: "Description 1",
+    event_timings: "Timings 1",
+    event_venue: "Venue 1",
+    event_image: im1.src,
+  },
+  {
+    event_name: "Event 2",
+    event_description: "Description 2",
+    event_timings: "Timings 2",
+    event_venue: "Venue 2",
+    event_image: im2.src,
+  },
+  {
+    event_name: "Event 3",
+    event_description: "Description 3",
+    event_timings: "Timings 3",
+    event_venue: "Venue 3",
+    event_image: im3.src,
+  },
+  {
+    event_name: "Event 4",
+    event_description: "Description 4",
+    event_timings: "Timings 4",
+    event_venue: "Venue 4",
+    event_image: im4.src,
+  },
+  {
+    event_name: "Event 5",
+    event_description: "Description 5",
+    event_timings: "Timings 5",
+    event_venue: "Venue 5",
+    event_image: im5.src,
+  },
+  {
+    event_name: "Event 6",
+    event_description: "Description 6",
+    event_timings: "Timings 6",
+    event_venue: "Venue 6",
+    event_image: im6.src,
+  },
+  {
+    event_name: "Event 7",
+    event_description: "Description 7",
+    event_timings: "Timings 7",
+    event_venue: "Venue 7",
+    event_image: im7.src,
+  },
+  {
+    event_name: "Event 8",
+    event_description: "Description 8",
+    event_timings: "Timings 8",
+    event_venue: "Venue 8",
+    event_image: im8.src,
+  },
+  {
+    event_name: "Event 9",
+    event_description: "Description 9",
+    event_timings: "Timings 9",
+    event_venue: "Venue 9",
+    event_image: im9.src,
+  },
+  {
+    event_name: "Event 10",
+    event_description: "Description 10",
+    event_timings: "Timings 10",
+    event_venue: "Venue 10",
+    event_image: im10.src,
+  },
+  {
+    event_name: "Event 11",
+    event_description: "Description 11",
+    event_timings: "Timings 11",
+    event_venue: "Venue 11",
+    event_image: im11.src,
+  },
+  {
+    event_name: "Event 12",
+    event_description: "Description 12",
+    event_timings: "Timings 12",
+    event_venue: "Venue 12",
+    event_image: im12.src,
+  },
+  {
+    event_name: "Event 13",
+    event_description: "Description 13",
+    event_timings: "Timings 13",
+    event_venue: "Venue 13",
+    event_image: im13.src,
+  }
 ];
-
 
 export default function IndexPage() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -66,10 +141,8 @@ export default function IndexPage() {
 
   // Background images based on media query
   const backgroundImages = isPhone
-    //? [im1.src, im2.src, im3.src, im4.src, digil.src, im6.src, im7.src, im8.src, im9.src, im10.src, im11.src, im12.src]
-    //: [im1.src, im2.src, im3.src, prompt.src, digi.src, hal.src, vr.src, mp.src, crc.src, im10.src, im11.src, im12.src, xo.src];
-    ?[im1, im2, im3, im4, digil, im6, im7, im8, im9, im10, im11, im12, im13]
-    : [im1, im2, im3, prompt, digi, hal, vr, mp, crc, im10, im11, im12, xo];
+    ? [im1.src, im2.src, im3.src, im4.src, digil.src, im6.src, im7.src, im8.src, im9.src, im10.src, im11.src, im12.src]
+    : [im1.src, im2.src, im3.src, prompt.src, digi.src, hal.src, vr.src, mp.src, crc.src, im10.src, im11.src, im12.src, xo.src];
 
   useEffect(() => {
     document.body.style.backgroundImage = `url(${backgroundImages[activeIndex]})`;
@@ -78,15 +151,7 @@ export default function IndexPage() {
   return (
     <div>
       <Navbar />
-      <div className="z-1">
-        <SwiperComponent images={images.map(image => image.src )} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
-      </div>
-      <div className="absolute z-9999">
-        <ModalComponent isOpen={isModalOpen} closeModal={() => setIsModalOpen(false)} selectedIndex={activeIndex} />
-      </div>
-      <div className="text-center z-9999" onClick={() => setIsModalOpen(true)}> 
-        <BackgroundGradientDemo text="View More" />
-      </div>
+      <SwiperComponent events={events} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
     </div>
   );
 };

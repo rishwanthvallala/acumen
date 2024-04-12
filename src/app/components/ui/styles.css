@@ -235,3 +235,27 @@ body {
 .mobile-margin-top {
   margin-top: 32px;
 }
+.swiper-slide {
+  position: relative;
+}
+
+.description-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Remove background color */
+  background: none;
+
+  /* Apply blur effect (adjust filter values as needed) */
+  backdrop-filter: blur(5px); /* Adjust blur strength */
+  -webkit-backdrop-filter: blur(5px); /* For WebKit browsers */
+    transition: backdrop-filter 1s ease-in-out; /* Adjust transition duration and timing */
+
+  /* Animate content elements to appear from bottom */
+  padding: 20px;
+  z-index: 1000; /* Make sure the overlay is on top */
+  overflow: auto; /* Enable scrolling if content exceeds overlay height */
+}
+
