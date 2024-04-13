@@ -32,7 +32,11 @@ const ImageGalleryDemo: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="flex justify-center mt-20 mb-8 ml-8">
+=======
+    <div className="flex justify-center mt-20 mb-8 ml-8 mr-4">
+>>>>>>> ad01435 (events 4/4)
       <ImageGallery images={images} /> {/* Render the ImageGallery component with the images array */}
     </div>
   );

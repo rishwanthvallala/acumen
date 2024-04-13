@@ -15,7 +15,7 @@ export function BackgroundGradientDemo({ text }: BackgroundGradientDemoProps) {
 
   return (
 
-        <div className="flex justify-center items-center mt-20 mb-32">
+        <div className="flex justify-center items-center mt-20 mb-16">
             <BackgroundGradient className="rounded-[60px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900">
 
 

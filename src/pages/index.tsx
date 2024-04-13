@@ -1,23 +1,29 @@
-import { useState } from 'react';
-import { Navbar } from "../app/components/ui/navbar";
-import Landing from "../app/landing";
-import ModalComponent from "../app/modal";
+"use client";
+import { HeroParallaxDemo } from "../app/parallax-hero-page";
+import { InfiniteMovingCardsDemo } from "../app/InfiniteScroll";
+import {AnimatedTooltipPreview} from "../app/me";
+import { BackgroundGradientDemo } from "../app/BackgroundGradientDemo";
+import { HeroHighlightDemo } from "../app/HeroHighlightDemo";
+import  ImageGalleryDemo  from "../app/ImageGalleryDemo";
+import Navbar from "@/app/components/ui/navbar";
+import Link from "next/link";
+import "./globals.css";
 
-export default function Home() {
-  const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 
-  const openModal = () => {
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
-
+export default function Landing() {
   return (
     <>
-      <Navbar />
-      <Landing />
+        <Navbar />
+        <HeroParallaxDemo />
+
+        <Link href="/events">
+          <BackgroundGradientDemo text="Explore Events" />
+        </Link>
+        <HeroHighlightDemo part1="Our" part2="Mentors" />
+        <InfiniteMovingCardsDemo />
+        <HeroHighlightDemo part1="The" part2="coordinators" />
+        <ImageGalleryDemo />
+        <AnimatedTooltipPreview />
 
     </>
   );
