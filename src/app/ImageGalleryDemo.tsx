@@ -3,7 +3,7 @@ import ImageGallery from './components/ui/image-gallery'; // Import the ImageGal
 import image1 from '../coordinators-imgs/hima.jpg';
 import image2 from '../coordinators-imgs/pavan.jpg';
 import image3 from '../coordinators-imgs/Hrishitha.jpg';
-import image4 from '../coordinators-imgs/Bhavana.jpg';
+import image4 from '../coordinators-imgs/bhavana.jpg';
 
 const ImageGalleryDemo: React.FC = () => {
   // Define an array of locally sourced image URLs
