@@ -119,7 +119,6 @@ const events = [
 
 export default function IndexPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Use useMediaQuery unconditionally to avoid React Hooks error
    const isPhone = useMediaQuery({ query: "(max-width: 768px)" });
