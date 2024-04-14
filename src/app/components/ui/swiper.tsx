@@ -74,7 +74,7 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
            <div style={{ position: 'relative' }}>
              <img src={event.event_image} alt={`Image ${index + 1}`} className="swiper-image" onClick={() => handleSlideClick(index)} />
              {selectedSlide === index && (
-               <div className="description-overlay  top-0 left-0  flex flex-col justify-center items-center text-white backdrop-filter backdrop-blur bg-gray-800 bg-opacity-75">
+               <div className="description-overlay  top-0 left-0  flex flex-col justify-center items-center text-white backdrop-filter backdrop-blur bg-gray-900 bg-opacity-75">
                  <h3 className="text-2xl font-bold mb-2 text-center">{event.event_name}</h3>
                  <p className="mb-2">{event.event_description}</p>
                  <p className="mb-2">Timings: {event.event_timings}</p>
@@ -82,10 +82,10 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
                  <div className="flex space-x-4">
                  {event.event_link && (
                     <a href={event.event_link} >
-                      <button className="register-button bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Register</button>
+                      <button className=" text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Register</button>
                     </a>
                   )}
-                  <button className="close bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded" onClick={() => handleSlideClick(index)}>Close</button>
+                  <button className=" py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" onClick={() => handleSlideClick(index)}>Close</button>
                  </div>
                </div>
              )}

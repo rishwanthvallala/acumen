@@ -68,7 +68,7 @@ export const ParallaxScroll = ({ cards, className }: { cards: any[]; className?:
           {firstPart.map((el, idx) => (
             <motion.div style={{ y: translateFirst }} key={"grid-1" + idx}>
               <div className="card bg-white overflow-hidden shadow-lg" style={{ borderRadius: "1rem" }}>
-                <img src={el.imageUrl.src} alt={el.title} className="w-full" />
+                <img src={el.imageUrl} alt={el.title} className="w-full" />
                 <div className="card-content p-4">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 flex justify-center items-center">{el.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300 flex justify-center items-center">{el.description}</p>
@@ -81,7 +81,7 @@ export const ParallaxScroll = ({ cards, className }: { cards: any[]; className?:
           {secondPart.map((el, idx) => (
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
               <div className="card bg-white overflow-hidden shadow-lg" style={{ borderRadius: "1rem" }}>
-                <img src={el.imageUrl.src} alt={el.title} className="w-full" />
+                <img src={el.imageUrl} alt={el.title} className="w-full" />
                 <div className="card-content p-4">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 flex justify-center items-center">{el.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300 flex justify-center items-center">{el.description}</p>
@@ -94,7 +94,7 @@ export const ParallaxScroll = ({ cards, className }: { cards: any[]; className?:
           {thirdPart.map((el, idx) => (
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
               <div className="card bg-white overflow-hidden shadow-lg" style={{ borderRadius: "1rem" }}>
-                <img src={el.imageUrl.src} alt={el.title} className="w-full" />
+                <img src={el.imageUrl} alt={el.title} className="w-full" />
                 <div className="card-content p-4 ">
                   <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 flex justify-center items-center">{el.title}</h3>
                   <p className="text-gray-600 dark:text-gray-300 flex justify-center items-center">{el.description}</p>
