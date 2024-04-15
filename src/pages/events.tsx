@@ -8,114 +8,13 @@ import { EffectCards } from "swiper/modules";
 import SwiperCore, { Swiper as SwiperType } from "swiper";
 
 
-
 import Navbar from "../app/components/ui/navbar";
 import SwiperComponent from "../app/components/ui/swiper";
 import "./globals.css";
-
+import { BackgroundGradientDemo } from "../app/BackgroundGradientDemo";
+import events  from "../lib/events.json";
 SwiperCore.use([EffectCards]);
-const events = [
-  {
-    event_name: "Webathon",
-    event_description: "Description 1",
-    event_timings: "Timings 1",
-    event_venue: "Venue 1",
-    event_image: "/1.png",
-    event_link: "https://unstop.com/o/JkWTCbG?lb=fqZDoJ0"
-  },
-  {
-    event_name: "Paper Presentation",
-    event_description: "Description 2",
-    event_timings: "Timings 2",
-    event_venue: "Venue 2",
-    event_image: "/2.png",
-    event_link: "https://forms.gle/7L4WohPaR1MKVwJ97"
-  },
-  {
-    event_name: "Project Expo",
-    event_description: "Description 3",
-    event_timings: "Timings 3",
-    event_venue: "Venue 3",
-    event_image: "/3.png",
-    event_link: "https://forms.gle/DzuYzVgkCgSFwvbK6"
-  },
-  {
-    event_name: "Beyond the Prompt",
-    event_description: "Description 4",
-    event_timings: "Timings 4",
-    event_venue: "Venue 4",
-    event_image: "/4.png",
-    event_link:"https://forms.gle/nrxeRcGxUHTa33ey6"
-  },
-  {
-    event_name: "Digital Art",
-    event_description: "Description 5",
-    event_timings: "Timings 5",
-    event_venue: "Venue 5",
-    event_image: "/5.png",
 
-  },
-  {
-    event_name: "Scary House",
-    event_description: "Description 6",
-    event_timings: "Timings 6",
-    event_venue: "Venue 6",
-    event_image: "/6.png",
-  },
-  {
-    event_name: "VR Zone",
-    event_description: "Description 7",
-    event_timings: "Timings 7",
-    event_venue: "Venue 7",
-    event_image: "/7.png",
-    event_link: "https://forms.gle/Q5299tDmrde1vTqN9"
-  },
-  {
-    event_name: "Geo Guesser",
-    event_description: "Description 8",
-    event_timings: "Timings 8",
-    event_venue: "Venue 8",
-    event_image: "/8.png",
-    event_link:"https://docs.google.com/forms/d/e/1FAIpQLSfotkcbV9pFURpDlBhPjJbOaBZl4mN0BrtTzU-uLH2PWE-SYQ/viewform"
-  },
-  {
-    event_name: "IPL Auction",
-    event_description: "Description 9",
-    event_timings: "Timings 9",
-    event_venue: "Venue 9",
-    event_image: "/9.png",
-    event_link:"https://forms.gle/dk6tVkRhroHVunFa6"
-  },
-  {
-    event_name: "BGMI Tournament",
-    event_description: "Description 10",
-    event_timings: "Timings 10",
-    event_venue: "Venue 10",
-    event_image: "/10.png",
-    event_link:"https://forms.gle/noDS377jFVUWpLgL9"
-  },
-  {
-    event_name: "Infinite Words",
-    event_description: "Description 11",
-    event_timings: "Timings 11",
-    event_venue: "Venue 11",
-    event_image: "/11.png",
-  },
-  {
-    event_name: "Play Station",
-    event_description: "Description 12",
-    event_timings: "Timings 12",
-    event_venue: "Venue 12",
-    event_image: "/12.png",
-  },
-  {
-    event_name: "Tech Tac Toe",
-    event_description: "Description 13",
-    event_timings: "Timings 13",
-    event_venue: "Venue 13",
-    event_image: "/13.png",
-  }
-];
 
 export default function IndexPage() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -135,11 +34,27 @@ export default function IndexPage() {
     document.body.style.backgroundAttachment = 'fixed';
     document.body.style.backgroundPosition = 'center';
   }, [activeIndex, backgroundImages]);
+  const [selectedSlide, setSelectedSlide] = useState<number | null>(null);
+  const handleSlideClick = (index: number) => {
+    setSelectedSlide(index === selectedSlide ? null : index);
+  };
 
   return (
     <div>
-      <Navbar />
-      <SwiperComponent events={events} activeIndex={activeIndex} setActiveIndex={setActiveIndex} />
+      <div className="sticky top-0 z-10000" style={{ zIndex: 10000 }}>
+        <Navbar />
+
+      </div>
+
+      <div style={{zIndex: 10}}>
+        <SwiperComponent events={events} activeIndex={activeIndex} setActiveIndex={setActiveIndex} selectedSlide={selectedSlide} setSelectedSlide={setSelectedSlide} handleSlideClick={handleSlideClick} />
+      </div>
+      
+      
+      <div onClick={() => handleSlideClick(activeIndex)} >
+          <BackgroundGradientDemo text="View More" />
+
+      </div>
     </div>
   );
 };

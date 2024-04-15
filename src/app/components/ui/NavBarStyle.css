@@ -1,20 +1,4 @@
-.Navbr {
-  display: flex;
-  align-items: center;
-  font-size: 1.2rem;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-  background-color: rgb(0, 0, 0);
-  width: auto;
-  border: 2px solid white;
-  border-radius: 50px;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 500; /* Ensure navbar is always on top */
-}
+
 
 .navmen {
   display: grid;
@@ -22,7 +6,7 @@
   grid-gap: 30px;
   align-items: center;
   text-align: center;
-  margin-top: 3px;
+  margin-top: 0px
 }
 
 .nav-links i {

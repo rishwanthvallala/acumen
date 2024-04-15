@@ -4,7 +4,7 @@ import { InfiniteMovingCardsDemo } from "../app/InfiniteScroll";
 import {AnimatedTooltipPreview} from "../app/me";
 import { BackgroundGradientDemo } from "../app/BackgroundGradientDemo";
 import { HeroHighlightDemo } from "../app/HeroHighlightDemo";
-import  ImageGalleryDemo  from "../app/ImageGalleryDemo";
+import  ImageGalleryDemo from "../app/ImageGalleryDemo";
 import Navbar from "@/app/components/ui/navbar";
 import Link from "next/link";
 import "./globals.css";
@@ -13,7 +13,11 @@ import "./globals.css";
 export default function Landing() {
   return (
     <>
+        <div className="sticky z-10000">
         <Navbar />
+
+        </div>
+        
         <HeroParallaxDemo />
 
         <Link href="/events">

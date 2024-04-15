@@ -20,59 +20,11 @@ body {
   border-radius: 12px;
 }
 
-.swiper-slide:nth-child(1n) {
-  background-image: url("/1.png");
+.swiper-slide img {
   border: 3px solid white;
 }
 
-.swiper-slide:nth-child(2n) {
-  background-image: url("/2.png");
-  border: 3px solid white;
-}
 
-.swiper-slide:nth-child(3n) {
-  background-image: url("/3.png");
-  border: 3px solid white;
-}
-
-.swiper-slide:nth-child(4n) {
-  background-image: url("/5.png");
-  border: 3px solid white;
-}
-
-.swiper-slide:nth-child(5n) {
-  background-image: url("/6.png");
-  border: 3px solid white;
-}
-
-.swiper-slide:nth-child(6n) {
-  background-image: url("/7.png");
-  border: 3px solid white;
-}
-
-.swiper-slide:nth-child(7n) {
-  background-image: url("/8.png");
-  border: 3px solid white;
-}
-
-.swiper-slide:nth-child(8n) {
-  background-image: url("/9.png");
-  border: 3px solid white;
-}
-
-.swiper-slide:nth-child(9n) {
-  background-image: url("/10.png");
-  border: 3px solid white;
-}
-
-.swiper-slide:nth-child(10n) {
-  background-image: url("/11.png");
-  border: 3px solid white;
-}
-.swiper-slide:nth-child(11n) {
-  background-image: url("/12.png");
-  border: 3px solid white;
-}
 
 @media (min-width: 1024px) {
   .swiper-image {

@@ -24,12 +24,14 @@ interface SwiperProps {
   events: Event[];
   activeIndex: number;
   setActiveIndex: React.Dispatch<React.SetStateAction<number>>;
+  selectedSlide: number | null;
+  setSelectedSlide: React.Dispatch<React.SetStateAction<number | null>>;
+  handleSlideClick: (index: number) => void;
 }
 
-const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveIndex }) => {
+const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveIndex, selectedSlide, setSelectedSlide, handleSlideClick}) => {
     const swiperRef = React.useRef<SwiperRef>(null);
     const [isMobile, setIsMobile] = useState(false);
-    const [selectedSlide, setSelectedSlide] = useState<number | null>(null);
      const goNext = () => {
         swiperRef.current?.swiper.slideNext();
      };
@@ -48,16 +50,14 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
        return () => window.removeEventListener('resize', handleResize);
      }, []);
 
-     const handleSlideClick = (index: number) => {
-      setSelectedSlide(index === selectedSlide ? null : index);
-    };
+ 
 
   
 
 
     return (
       <div className="swiper-container" style={{ marginTop: isMobile ? '140px' : '0' }}>
-        <button className="swiper-button-prev" onClick={goPrev}>
+        <button className="swiper-button-prev" onClick={goPrev} style={{zIndex: 1000, color: 'white'}}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
         <Swiper
@@ -95,13 +95,10 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
 
           ))}
         </Swiper>
-        <button className="swiper-button-next" onClick={goNext}>
+        <button className="swiper-button-next" onClick={goNext} style={{zIndex: 1000, color: 'white'}}>
           <FontAwesomeIcon icon={faChevronRight} />
         </button>
-        <div onClick={() => handleSlideClick(activeIndex)} >
-          <BackgroundGradientDemo text="View More" />
 
-        </div>
 
       </div>
 

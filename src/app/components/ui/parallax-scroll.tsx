@@ -62,7 +62,7 @@ export const ParallaxScroll = ({ cards, className }: { cards: any[]; className?:
   const translateThird = useTransform(scrollYProgress, [0, 1], [0, -200]);
 
   return (
-    <div className={cn("items-start overflow-y-auto w-full", className)}>
+    <div className={cn("items-start overflow-y-auto mr-32 w-full ", className)}>
       <div className="grid grid-cols-2 lg:grid-cols-3 items-start max-w-5xl mx-auto gap-10 py-40 px-10">
         <div className="grid gap-10">
           {firstPart.map((el, idx) => (
