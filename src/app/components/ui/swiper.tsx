@@ -56,7 +56,7 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
 
 
     return (
-      <div className="swiper-container" style={{ marginTop: isMobile ? '140px' : '0' }}>
+      <div className="swiper-container" style={{ marginTop: isMobile ? '80px' : '0' }}>
         <button className="swiper-button-prev" onClick={goPrev} style={{zIndex: 1000, color: 'white'}}>
           <FontAwesomeIcon icon={faChevronLeft} />
         </button>
@@ -75,10 +75,11 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
              <img src={event.event_image} alt={`Image ${index + 1}`} className="swiper-image" onClick={() => handleSlideClick(index)} />
              {selectedSlide === index && (
                <div className="description-overlay  top-0 left-0  flex flex-col justify-center items-center text-white backdrop-filter backdrop-blur bg-gray-900 bg-opacity-75">
-                 <h3 className="text-2xl font-bold mb-2 text-center">{event.event_name}</h3>
-                 <p className="mb-2">{event.event_description}</p>
-                 <p className="mb-2">Timings: {event.event_timings}</p>
-                 <p className="mb-2">Venue: {event.event_venue}</p>
+                 <h3 className="text-xl lg:text-4xl md:text-2xl font-bold mb-2 lg:mb-8 md:mb-8 text-center">{event.event_name}</h3>
+                 <p className="mb-2 lg:ml-8 lg:mr-8 md:ml-8 md:mr-8 lg:mb-8 text-xs lg:text-sm " style={{ fontSize: isMobile ? '0.5rem' : '1rem'}}
+                 >{event.event_description}</p>
+                 <p className="mb-2 ml-2 text-xs md:text-sm lg:text-xl">Timings: {event.event_timings}</p>
+                 <p className="mb-2 ml-2 lg:mb-8 text-xs md:text-sm lg:text-xl" >Venue: {event.event_venue}</p>
                  <div className="flex space-x-4">
                  {event.event_link && (
                     <a href={event.event_link} >
