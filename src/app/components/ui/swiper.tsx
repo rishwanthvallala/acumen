@@ -17,6 +17,7 @@ interface Event {
   event_timings: string;
   event_venue: string;
   event_image: string;
+  event_mode: string;
   event_link?: string;
 }
 
@@ -78,6 +79,7 @@ const SwiperComponent: React.FC<SwiperProps> = ({events, activeIndex, setActiveI
                  <h3 className="text-xl lg:text-4xl md:text-2xl font-bold mb-2 lg:mb-8 md:mb-8 text-center">{event.event_name}</h3>
                  <p className="mb-2 lg:ml-8 lg:mr-8 md:ml-8 md:mr-8 lg:mb-8 text-xs lg:text-sm " style={{ fontSize: isMobile ? '0.5rem' : '1rem'}}
                  >{event.event_description}</p>
+                 <p className="mb-2 ml-2 text-xs md:text-sm lg:text-xl">Mode: {event.event_mode}</p>
                  <p className="mb-2 ml-2 text-xs md:text-sm lg:text-xl">Timings: {event.event_timings}</p>
                  <p className="mb-2 ml-2 lg:mb-8 text-xs md:text-sm lg:text-xl" >Venue: {event.event_venue}</p>
                  <div className="flex space-x-4">
