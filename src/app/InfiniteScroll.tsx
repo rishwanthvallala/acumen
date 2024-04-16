@@ -34,10 +34,5 @@ const testimonials = [
     name: "Dr.K.Ram Mohan Rao",
     designation: "HOD, IT",
     imgUrl: "/HOD.jpg", // Add image URL
-  },
-  {
-    name: "Ms. CHITTEPU SIREESHA",
-    designation: "Faculty Coordinator",
-    imgUrl: "/Sireesha.jpg", // Add image URL
   }
 ];

@@ -11,7 +11,7 @@ export const ParallaxScroll = ({ cards, className }: { cards: any[]; className?:
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
-    };
+    }; 
 
     // Check if window is defined before attaching event listener
     if (typeof window !== 'undefined') {
