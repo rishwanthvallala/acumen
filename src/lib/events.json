@@ -2,8 +2,8 @@
     {
         "event_name": "Webathon",
         "event_description": "The event is available in both online and offline mode. Are you ready to put your skills to the test and create a website that's truly unique? Join our webathon and show us what you're made of! Whether you're an experienced pro or a budding talent, we want to see your best work. You'll have the chance to win amazing prizes and showcase your design to the world. So what are you waiting for? Let your creativity run wild and register today!",
-        "event_timings": "9:40am - 11:30am",
-        "event_venue": "VS Room no.104",
+        "event_timings": "1:30am - 3:30am",
+        "event_venue": "VS Room no.103",
         "event_image": "/1.webp",
         "event_mode": "online and offline",
         "event_link": "https://unstop.com/o/JkWTCbG?lb=fqZDoJ0"
@@ -11,8 +11,8 @@
     {
         "event_name": "Paper or Poster Presentation",
         "event_description": "Theme- Any domain of your choice related to latest technologies.Presentation Format: You have the option to choose between a poster presentation or a paper presentation.Poster Presentation: Design an engaging and informative poster that highlights your research or project.Paper Presentation: The paper presented can be your own work or any other author. The presentation must contain at most 10 slides.The contestants will be given a total of 5 minutes for presenting their work.",
-        "event_timings": "11:00am - 12:00pm",
-        "event_venue": "PIM Block Room no.104",
+        "event_timings": "10:30am - 12:30pm",
+        "event_venue": "PIM Block Seminar Hall",
         "event_image": "/2.webp",
         "event_mode": "offline",
         "event_link": "https://forms.gle/7L4WohPaR1MKVwJ97"
@@ -20,8 +20,8 @@
     {
         "event_name": "Project Expo",
         "event_description": "Project Expo is an engaging event where participants showcase their innovative projects to a diverse audience",
-        "event_timings": "9:40am - 10:40am",
-        "event_venue": "PIM Block Room no.104",
+        "event_timings": "1:30am - 1:30am",
+        "event_venue": "PIM Block Seminar Hall",
         "event_image": "/3.webp",
         "event_mode": "offline",
         "event_link": "https://forms.gle/DzuYzVgkCgSFwvbK6"
@@ -29,7 +29,7 @@
     {
         "event_name": "Beyond the Prompt",
         "event_description": "This Event focuses on the efficient utilization of the AI Tools.Any prior technical knowledge is not required for your prompting skills.Give a proper input to get your desired output.",
-        "event_timings": "10:00am - 3:00pm",
+        "event_timings": "10:00am - 12:30pm",
         "event_venue": "VS Block Room no.103",
         "event_image": "/4.webp",
         "event_mode": "offline",
@@ -37,12 +37,13 @@
     },
     {
         "event_name": "Digital Art",
-        "event_description": "Creating digital art using computer vision without touch sensors",
+        "event_description": "Air painting merges technology and art seamlessly, allowing creators to craft without touch sensors.It's like painting with invisible brushes in the air,offering a diverse palette of colors and styles.Plus, the canvas suggests ideas, making it perfect for anyone wanting to explore art in a tech-savy, yet artistic way.With this tech we include diverse games such as Dumbcharades,Theme painting,Clue guesser.",
         "event_timings": "9:40am - 3:00pm",
-        "event_venue": "VS Block ",
-        "event_image": "/5.webp",
+        "event_venue": "VS Block Room no.101",
+        "event_image": "/8.webp",
         "event_mode": "offline",
         "event_link": "https://forms.gle/caR8oBZz3WfStizC9"
+        
 
     },
     {
@@ -51,16 +52,15 @@
         "event_description": "There will be a hidden key in te scary house which will fit a lock, find the key and unlock the lock to win the prize.",
         "event_timings": "9:40am - 3:00pm",
         "event_venue": "VS Block Room no.304",
-        "event_image": "/6.webp",
-        "event_mode": "On spot",
-        "event_link": "https://forms.gle/SnJtJaGzW6BR87iL9"
+        "event_image": "/7.webp",
+        "event_mode": "On spot"
     },
     {
         "event_name": "VR Zone",
         "event_description": "Virtual Reality (VR) is a computer-generated environment with scenes and objects that appear to be real, making the user feel they are immersed in their surroundings. This environment is perceived through a device known as a Virtual Reality headset or helmet.",
-        "event_timings": "9:40am - 3:00pm",
-        "event_venue": "VS Block ",
-        "event_image": "/7.webp",
+        "event_timings": "10:00am - 3:00pm",
+        "event_venue": "VS Block Ground floor",
+        "event_image": "/9.webp",
         "event_mode": "offline",
         "event_link": "https://forms.gle/Q5299tDmrde1vTqN9"
     },
@@ -68,8 +68,9 @@
         "event_name": "Geo Guesser",
         "event_description": "Join our GeoGuessr event and test your global knowledge by identifying locations from Street View images in a fun and interactive quiz!",
         "event_timings": "9:40am - 3:00pm",
-        "event_venue": "VS Block",
-        "event_image": "/8.webp",
+        "event_venue": "VS Block Room no.104",
+        "event_image": "/10.webp",
+        "event_mode": "offline",
         "event_link": "https://docs.google.com/forms/d/e/1FAIpQLSfotkcbV9pFURpDlBhPjJbOaBZl4mN0BrtTzU-uLH2PWE-SYQ/viewform"
 
     },
@@ -78,7 +79,7 @@
         "event_description": "In an IPL mock auction, players use virtual money to bid on players, aiming to create the best team within their budget. ",
         "event_timings": "11:00am - 3:00pm",
         "event_venue": "PIM Block Room no.104",
-        "event_image": "/9.webp",
+        "event_image": "/5.webp",
         "event_mode": "offline",
         "event_link": "https://forms.gle/dk6tVkRhroHVunFa6"
 
@@ -89,18 +90,17 @@
         "event_description": "It is an Online multiplayer mobile gaming platform in which it is played through a LAN ",
         "event_timings": "11:00am - 3:00pm",
         "event_venue": "VS Block Ground floor",
-        "event_image": "/10.webp",
+        "event_image": "/6.webp",
         "event_mode": "offline",
         "event_link": "https://forms.gle/noDS377jFVUWpLgL9"
     },
     {
         "event_name": "Console Convergence",
         "event_description": "Welcome to Console Convergence, where gaming enthusiasts unite for an epic multiplayer showdown! Grab your joystick and immerse yourself in thrilling battles. Compete against friends and foes to claim victory and awesome prizes. It's game on at Console Convergence – join the fun and let the games begin!",
-        "event_timings": "9:40am - 3:00pm",
-        "event_venue": "VS Block ",
-        "event_image": "/11.webp",
-        "event_mode": "offline",
-        "event_link": "https://forms.gle/PzHS7h9YAv4rh5Yt5"
+        "event_timings": "10:00am - 3:00pm",
+        "event_venue": "VS Block Room no.201",
+        "event_image": "/12.webp",
+        "event_mode": "offline"
     },
 
 
@@ -109,8 +109,8 @@
         "event_name": "Tech Tac Toe",
         "event_description": "Fun version of tic tac toe where players technical knowledge is tested. when player answers correctly they have to throw the ball into 3x3 grid ,when they make a line they win.",
         "event_timings": "9:40am - 3:00pm",
-        "event_venue": "VS Block",
-        "event_image": "/12.webp",
+        "event_venue": "VS Block Ground floor",
+        "event_image": "/11.webp",
         "event_mode": "offline",
         "event_link": "https://forms.gle/YcugK1NaUTYEggCT8"
 
@@ -119,18 +119,19 @@
     {
         "event_name": "Tug Wars",
         "event_description": "An Entertaining series of games which contains Dog in a bone, Tug of war and Musical Chair. ",
-        "event_timings": "9:40am - 3:00pm",
-        "event_venue": "VS Block ",
+        "event_timings": "10:00am - 3:00pm",
+        "event_venue": "VS Block Ground floor",
         "event_image": "/13.webp",
         "event_mode": "offline",
-        "event_link": "https://forms.gle/yMbQjwd1EVKbyHAC7"
+        "event_link": "https://forms.gle/yhv63bU7dpps6PSv6"
     },
     {
         "event_name": "Face Painting",
         "event_description": "Enhance the event with face painting. Our artists create captivating designs, perfect for gatherings and celebrations. Experience the magic of this cherished tradition.Choose from fun designs like butterflies or ipl themes. Let us bring color to your event and make it unforgettable!",
-        "event_timings": "9:40am - 3:00pm",
+        "event_timings": "10:00am - 3:00pm",
         "event_venue": "VS Block Ground floor",
         "event_image": "/14.webp",
-        "event_mode":"On spot"
+        "event_mode": "offline",    
+        "event_link": "https://forms.gle/7L4WohPaR1MKVwJ97"
     }
 ]
