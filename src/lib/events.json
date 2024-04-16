@@ -20,7 +20,7 @@
     {
         "event_name": "Project Expo",
         "event_description": "Project Expo is an engaging event where participants showcase their innovative projects to a diverse audience",
-        "event_timings": "1:30am - 1:30am",
+        "event_timings": "1:30am - 3:30am",
         "event_venue": "PIM Block Seminar Hall",
         "event_image": "/3.webp",
         "event_mode": "offline",
@@ -77,7 +77,7 @@
     {
         "event_name": "IPL Auction",
         "event_description": "In an IPL mock auction, players use virtual money to bid on players, aiming to create the best team within their budget. ",
-        "event_timings": "11:00am - 3:00pm",
+        "event_timings": "11:00am - 2:00pm",
         "event_venue": "PIM Block Room no.104",
         "event_image": "/5.webp",
         "event_mode": "offline",
@@ -100,11 +100,9 @@
         "event_timings": "10:00am - 3:00pm",
         "event_venue": "VS Block Room no.101",
         "event_image": "/12.webp",
-        "event_mode": "offline"
+        "event_mode": "offline",
+        "event_link": "https://forms.gle/PzHS7h9YAv4rh5Yt5"
     },
-
-
-
     {
         "event_name": "Tech Tac Toe",
         "event_description": "Fun version of tic tac toe where players technical knowledge is tested. when player answers correctly they have to throw the ball into 3x3 grid ,when they make a line they win.",
