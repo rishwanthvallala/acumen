@@ -53,7 +53,8 @@
         "event_timings": "9:40am - 3:00pm",
         "event_venue": "VS Block Room no.304",
         "event_image": "/7.webp",
-        "event_mode": "On spot"
+        "event_mode": "On spot",
+        "event_link": "https://forms.gle/SnJtJaGzW6BR87iL9"
     },
     {
         "event_name": "VR Zone",
@@ -129,7 +130,6 @@
         "event_timings": "10:00am - 3:00pm",
         "event_venue": "VS Block Ground floor",
         "event_image": "/14.webp",
-        "event_mode": "offline",    
-        "event_link": "https://forms.gle/7L4WohPaR1MKVwJ97"
+        "event_mode": "On spot"
     }
 ]
