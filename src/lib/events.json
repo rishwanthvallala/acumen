@@ -2,7 +2,7 @@
     {
         "event_name": "Webathon",
         "event_description": "The event is available in both online and offline mode. Are you ready to put your skills to the test and create a website that's truly unique? Join our webathon and show us what you're made of! Whether you're an experienced pro or a budding talent, we want to see your best work. You'll have the chance to win amazing prizes and showcase your design to the world. So what are you waiting for? Let your creativity run wild and register today!",
-        "event_timings": "1:30am - 3:30am",
+        "event_timings": "1:30pm - 3:30pm",
         "event_venue": "VS Room no.103",
         "event_image": "/1.webp",
         "event_mode": "online and offline",
@@ -20,7 +20,7 @@
     {
         "event_name": "Project Expo",
         "event_description": "Project Expo is an engaging event where participants showcase their innovative projects to a diverse audience",
-        "event_timings": "1:30am - 3:30am",
+        "event_timings": "1:30pm - 3:30pm",
         "event_venue": "PIM Block Seminar Hall",
         "event_image": "/3.webp",
         "event_mode": "offline",
