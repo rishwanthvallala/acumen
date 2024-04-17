@@ -19,14 +19,12 @@ export const ParallaxScroll = ({
       setWindowWidth(window.innerWidth);
     };
 
-    // Check if window is defined before attaching event listener
     if (typeof window !== "undefined") {
       setWindowWidth(window.innerWidth);
       window.addEventListener("resize", handleResize);
     }
 
     return () => {
-      // Remove event listener on component unmount
       if (typeof window !== "undefined") {
         window.removeEventListener("resize", handleResize);
       }
@@ -36,39 +34,30 @@ export const ParallaxScroll = ({
   const third = Math.ceil(cards.length / 3);
   let firstPartLength, secondPartLength;
 
-  // Calculate the lengths of the first and second parts based on window width
   if (windowWidth < 768) {
-    // If window width is less than 768 pixels, split the cards into two equal parts
     firstPartLength = Math.ceil(cards.length / 2);
     secondPartLength = cards.length - firstPartLength;
   } else {
-    // Otherwise, split the cards into three equal parts
     firstPartLength = third;
     secondPartLength = third;
   }
 
-  let firstPart,
-    secondPart,
-    thirdPart = [];
+  let firstPartIndexes, secondPartIndexes, thirdPartIndexes;
 
-  // Slice the cards array for the first and second parts based on calculated lengths
   if (windowWidth < 768) {
-    // If window width is less than 768 pixels, slice the cards array without reversing
-    firstPart = cards.slice(0, firstPartLength);
-    secondPart = cards.slice(
-      firstPartLength,
-      firstPartLength + secondPartLength
-    );
+    firstPartIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    secondPartIndexes = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
   } else {
-    // Otherwise, use the previous logic for slicing the cards array
-    const firstPartIndexes = [5, 6, 7, 12, 10, 14, 17, 21];
-    const secondPartIndexes = [0, 1, 2, 3, 8, 15, 18, 22];
-    const thirdPartIndexes = [4, 11, 9, 13, 16, 19, 20, 23];
-
-    firstPart = firstPartIndexes.map((index) => cards[index]);
-    secondPart = secondPartIndexes.map((index) => cards[index]);
-    thirdPart = thirdPartIndexes.map((index) => cards[index]);
+    firstPartIndexes = [5, 6, 7, 12, 10, 14, 17, 21];
+    secondPartIndexes = [0, 1, 2, 3, 8, 15, 18, 22];
+    thirdPartIndexes = [4, 11, 9, 13, 16, 19, 20, 23];
   }
+
+  let firstPart = firstPartIndexes.map((index) => cards[index]);
+  let secondPart = secondPartIndexes.map((index) => cards[index]);
+  let thirdPart = thirdPartIndexes
+    ? thirdPartIndexes.map((index) => cards[index])
+    : [];
 
   const translateFirst = useTransform(scrollYProgress, [0, 1], [0, -200]);
   const translateSecond = useTransform(scrollYProgress, [0, 1], [0, 200]);
