@@ -36,9 +36,9 @@ export function ParallaxScrollDemo() {
     },
     {
       id: 6,
-      title: "Phani Meghana",
-      description: "Marketing Head",
-      imageUrl: "/meghana.jpg",
+      title: "Rishika R",
+      description: "Event Coordinator",
+      imageUrl: "/rishika_r.jpg",
     },
     {
       id: 7,
@@ -76,17 +76,18 @@ export function ParallaxScrollDemo() {
       description: "Event Coordinator",
       imageUrl: "/revanth.jpg",
     },
+
     {
       id: 13,
-      title: "Rishika M",
-      description: "Event Coordinator",
-      imageUrl: "/rishika_m.jpg",
+      title: "Phani Meghana",
+      description: "Marketing Head",
+      imageUrl: "/meghana.jpg",
     },
     {
       id: 14,
-      title: "Rishika R",
+      title: "Rishika M",
       description: "Event Coordinator",
-      imageUrl: "/rishika_r.jpg",
+      imageUrl: "/rishika_m.jpg",
     },
     {
       id: 15,
@@ -96,15 +97,15 @@ export function ParallaxScrollDemo() {
     },
     {
       id: 16,
-      title: "Suryateja",
-      description: "Event Coordinator",
-      imageUrl: "/suryateja.jpg",
-    },
-    {
-      id: 17,
       title: "Praneetha Balanagu",
       description: "Event Coordinator",
       imageUrl: "/praneetha.jpeg",
+    },
+    {
+      id: 17,
+      title: "Suryateja",
+      description: "Event Coordinator",
+      imageUrl: "/suryateja.jpg",
     },
     {
       id: 18,
@@ -147,6 +148,12 @@ export function ParallaxScrollDemo() {
       title: "Raheem Mirza",
       description: "Event Coordinator",
       imageUrl: "/raheem.jpeg",
+    },
+    {
+      id: 25,
+      title: "Ritesh",
+      description: "Event Coordinator",
+      imageUrl: "/Ritesh.jpeg",
     },
   ];
 

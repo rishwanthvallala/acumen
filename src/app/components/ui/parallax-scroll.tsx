@@ -45,8 +45,8 @@ export const ParallaxScroll = ({
   let firstPartIndexes, secondPartIndexes, thirdPartIndexes;
 
   if (windowWidth < 768) {
-    firstPartIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-    secondPartIndexes = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
+    firstPartIndexes = [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+    secondPartIndexes = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   } else {
     firstPartIndexes = [5, 6, 7, 12, 10, 14, 17, 21];
     secondPartIndexes = [0, 1, 2, 3, 8, 15, 18, 22];
